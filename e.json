@@ -1,0 +1,13 @@
+{
+    "message": "Diplôme émis et signé avec succès.",
+    "diploma_id": "e94ac5d8-474a-487e-87e7-bf9206e41e14",
+    "student": "kabore safi",
+    "degree": "Licence 3",
+    "file_hash": "466ff1d76d969b1a6fe4d631d71778acecdc853882ccf1aa0d4c72d5b50f8243",
+    "rsa_signature": "1BsOaqSbx+pDaC8DmSVaq4hs1VgX8U8TRe+SG9vtRLJcvgyzYAzbctiWyIRMcba1NueczfOEUx66nhcwD1o5wz/zor6m201GNyW2mw/GL1bzZRnY6ffMPOCoh888YAKMYzVHE5kgPAJ1N9hFsV6OEB4Qs4o8WXEfxxeI8MXwEyYXAVnDCGKktpjYTjm6poYlydK6dsCs0scnmlVKo8c/8mEn/JMFcjh9ixgKEGSXt1iz51WRZdDPOP+NbetJ1JqCiOf/saRpnJzwDZodbw3gILQe8Odwi0XHsYoogOav8YFqp+qXOObJCSstcLY2rgV8X+0z0vqhlUfiAjGpq7rC+Q==",
+    "eth_signature": "",
+    "university_address": "0xeFFCa40be9e3754d030CE89f38115Dc58833c02c",
+    "university_fingerprint": "3f93d4cde3b47a33587894cb3ea66c786fd48ff82d7b06307686b56dbb8fc94b",
+    "status": "signed",
+    "pdf_url": "http://127.0.0.1:8000/media/diplomas/pdf/diploma_e94ac5d8-474a-487e-87e7-bf9206e41e14.pdf"
+}
