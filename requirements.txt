@@ -9,3 +9,5 @@ python-decouple>=3.8
 reportlab>=4.2
 Pillow>=10.0
 qrcode[pil]>=7.4
+Whitenoise>=6.0
+

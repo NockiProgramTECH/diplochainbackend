@@ -102,6 +102,15 @@ python manage.py runserver
 
 ---
 
+
+### Documentation API (sWAGGER)
+| Méthode | Route | Description | Auth |
+|---|---|---|---|
+| GET | `/api/schema/swagger-ui/` | Documentation interactive (Swagger UI) | Public |
+Générée automatiquement par `drf-yasg` à partir des vues et serializers.
+|GET | `/api/schema/redoc/` | Documentation alternative (ReDoc) | Public |
+|GET | `/api/schema/` | Schéma OpenAPI brut (JSON) | Public
+
 ## Flux d'émission d'un diplôme
 
 ```
