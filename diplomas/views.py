@@ -51,6 +51,7 @@ class DiplomaIssueView(APIView):
     6. Sauvegarde tout
     """
     permission_classes = [permissions.IsAuthenticated]
+    serializer_class = DiplomaCreateSerializer
 
     def post(self, request):
         university = request.user
@@ -151,6 +152,7 @@ class VerifyByFileView(APIView):
     Accessible publiquement (pas de token requis).
     """
     permission_classes = [permissions.AllowAny]
+    serializer_class = VerifyByFileSerializer
 
     def post(self, request):
         serializer = VerifyByFileSerializer(data=request.data)
@@ -252,6 +254,7 @@ class VerifyByHashView(APIView):
     Vérification rapide par hash SHA-256.
     """
     permission_classes = [permissions.AllowAny]
+    serializer_class = VerifyByHashSerializer
 
     def post(self, request):
         serializer = VerifyByHashSerializer(data=request.data)
@@ -293,6 +296,7 @@ class VerifyByScanView(APIView):
     Accessible publiquement pour les recruteurs.
     """
     permission_classes = [permissions.AllowAny]
+    serializer_class = VerifyByScanSerializer
 
     def post(self, request):
         serializer = VerifyByScanSerializer(data=request.data)
@@ -387,6 +391,7 @@ class RevokeDiplomaView(APIView):
     Révoque un diplôme. Seule l'université émettrice peut révoquer.
     """
     permission_classes = [permissions.IsAuthenticated]
+    serializer_class = RevokeSerializer
 
     def post(self, request, pk):
         try:

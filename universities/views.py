@@ -65,6 +65,7 @@ class MyKeysView(APIView):
     ATTENTION: endpoint sensible — à sécuriser davantage en production.
     """
     permission_classes = [permissions.IsAuthenticated]
+    serializer_class = UniversityKeysSerializer
 
     def get(self, request):
         serializer = UniversityKeysSerializer(request.user)

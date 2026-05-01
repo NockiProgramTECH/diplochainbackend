@@ -107,7 +107,7 @@ def generate_diploma_pdf(diploma_data: dict) -> bytes:
     if QRCODE_AVAILABLE:
         diploma_id = str(diploma_data.get("diploma_id", ""))
         # On peut mettre l'URL de vérification ou juste l'ID
-        qr_content = f"https://diplochainbf.com/verify/{diploma_id}"
+        qr_content = f"{diploma_id}"
         
         qr = qrcode.QRCode(version=1, box_size=10, border=1)
         qr.add_data(qr_content)
@@ -118,8 +118,8 @@ def generate_diploma_pdf(diploma_data: dict) -> bytes:
         temp_qr_path = os.path.join(tempfile.gettempdir(), f"qr_{diploma_id}.png")
         img_qr.save(temp_qr_path)
         
-        # Dessiner le QR code en bas à droite
-        p.drawImage(temp_qr_path, width - 4.5*cm, 2.5*cm, width=2.5*cm, height=2.5*cm)
+        # Dessiner le QR code en haut à droite (aligné avec la bordure intérieure)
+        p.drawImage(temp_qr_path, width - 4.3*cm, height - 4.3*cm, width=2.5*cm, height=2.5*cm)
         
         # Nettoyage
         try: os.remove(temp_qr_path)
